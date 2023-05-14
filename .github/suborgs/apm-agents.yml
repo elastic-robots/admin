@@ -1,6 +1,6 @@
-# List of repos that belong to the apm-agents suborg
+# List of repos that belong to the apm-agent suborg
 suborgrepos:
-  - apm-agents*
+  - apm-agent*
 
 repository:
   # Either `true` to enable issues for this repository, `false` to disable them.
