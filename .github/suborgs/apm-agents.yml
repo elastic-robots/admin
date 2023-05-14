@@ -1,46 +1,10 @@
-# This settings can be used to create suborg level settings
-
-# List of repos that belong to the suborg
+# List of repos that belong to the apm-agents suborg
 suborgrepos:
   - apm-agents*
-# You can use Glob patterns
 
-suborgteams:
-  - core
-
-#repository:
-  # This is the settings that need to be applied to all repositories in the org
-  # See https://developer.github.com/v3/repos/#edit for all available settings for a repository
-  # A short description of the repository that will show up on GitHub
-  #description: description of the repo
-
-  # A URL with more information about the repository
-  #homepage: https://example.github.io/
-
-  # Keep this as true for most cases
-  # A lot of the policies below cannot be implemented on bare repos
-  # Pass true to create an initial commit with empty README.
-  #auto_init: true
-
-  # A comma-separated list of topics to set on the repository
-  #topics:
-  #- github
-  #- safe-settings
-  #- new-topic
-  #- another-topic
-  #- topic-12
-
-  # Either `true` to make the repository private, or `false` to make it public.
-  # If this value is changed and if Org members cannot change the visibility of repos
-  # it would result in an error when updating a repo
-  #private: false
-
-  # Can be public or private. If your organization is associated with an enterprise account using
-  # GitHub Enterprise Cloud or GitHub Enterprise Server 2.20+, visibility can also be internal.
-  #visibility: private
-
+repository:
   # Either `true` to enable issues for this repository, `false` to disable them.
-  #has_issues: true
+  has_issues: true
 
   # Either `true` to enable projects for this repository, or `false` to disable them.
   # If projects are disabled for the organization, passing `true` will cause an API error.
@@ -50,7 +14,7 @@ suborgteams:
   #has_wiki: true
 
   # The default branch for this repository.
-  #default_branch: main
+  default_branch: main
 
   # Desired language or platform [.gitignore template](https://github.com/github/gitignore)
   # to apply. Use the name of the template without the extension.
@@ -73,17 +37,15 @@ suborgteams:
 
   # Either `true` to allow rebase-merging pull requests, or `false` to prevent
   # rebase-merging.
-  #allow_rebase_merge: true
+  allow_rebase_merge: true
 
   # Either `true` to allow auto-merge on pull requests,
   # or `false` to disallow auto-merge.
-  # Default: `false`
-  #allow_auto_merge: true
+  allow_auto_merge: true
 
   # Either `true` to allow automatically deleting head branches
   # when pull requests are merged, or `false` to prevent automatic deletion.
-  # Default: `false`
-  #delete_branch_on_merge: true
+  delete_branch_on_merge: true
 
 # The following attributes are applied to any repo within the org
 # So if a repo is not listed above is created or edited
@@ -106,28 +68,6 @@ labels:
   exclude:
     # don't delete any labels created on GitHub that starts with "backp"
     - name: ^backp*
-
-#collaborators:
-# Collaborators: give specific users access to any repository.
-# See https://developer.github.com/v3/repos/collaborators/#add-user-as-a-collaborator for available options
-
-#- username: drstrange
-#  permission: push
-# The permission to grant the collaborator. Can be one of:
-# * `pull` - can pull, but not push to or administer this repository.
-# * `push` - can pull and push, but not administer this repository.
-# * `admin` - can pull, push and administer this repository.
-#- username: beetlejuice
-#  permission: pull
-#  exclude:
-#  - actions-demo
-# You can exclude a list of repos for this collaborator and all repos except these repos would have this collaborator
-#- username: thor
-#  permission: push
-#  include:
-#  - actions-demo
-#  - another-repo
-# You can include a list of repos for this collaborator and only those repos would have this collaborator
 
 # See https://developer.github.com/v3/teams/#add-or-update-team-repository for available options
 teams:
@@ -172,7 +112,6 @@ branches:
         apps: []
         users: []
         teams: []
-
 
 validator:
   pattern: '[a-zA-Z0-9_-]+_[a-zA-Z0-9_-]+.*'
