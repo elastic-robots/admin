@@ -59,7 +59,7 @@ labels:
 
     - name: feature
       color: '#336699'
-      description: 'New functionality foo bar acme'
+      description: 'New functionality foo bar acme bla'
 
     - name: new-label
       # include the old name to rename an existing label
