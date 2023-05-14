@@ -37,11 +37,11 @@ repository:
 
   # Either `true` to allow rebase-merging pull requests, or `false` to prevent
   # rebase-merging.
-  allow_rebase_merge: false
+  allow_rebase_merge: true
 
   # Either `true` to allow auto-merge on pull requests,
   # or `false` to disallow auto-merge.
-  allow_auto_merge: false
+  allow_auto_merge: true
 
   # Either `true` to allow automatically deleting head branches
   # when pull requests are merged, or `false` to prevent automatic deletion.
