@@ -1,39 +1,61 @@
-# List of repos that belong to the apm-agent suborg
-suborgrepos:
-  - apm-agent*
-
+# This settings can be used to create repo level settings
 repository:
+  # Name of the repo
+  name: apm-agent-ruby
+
+  # Create the repo if it is not existing
+  force_create: true
+
+  # A short description of the repository that will show up on GitHub
+  description: Elastic APM Ruby Agent
+
+  # Keep this as true for most cases
+  # A lot of the policies below cannot be implemented on bare repos
+  # Pass true to create an initial commit with empty README.
+  auto_init: true
+
+  # A comma-separated list of topics to set on the repository
+  topics:
+  - ruby
+  - safe-settings
+  - monitoring
+  - apm
+
+  # Settings for Code security and analysis
+  # Dependabot Alerts
+  security:
+   enableVulnerabilityAlerts: true
+   enableAutomatedSecurityFixes: true
+
+  # Either `true` to make the repository private, or `false` to make it public.
+  private: false
+
   # Either `true` to enable issues for this repository, `false` to disable them.
   has_issues: true
 
   # Either `true` to enable projects for this repository, or `false` to disable them.
   # If projects are disabled for the organization, passing `true` will cause an API error.
-  #has_projects: true
+  has_projects: true
 
   # Either `true` to enable the wiki for this repository, `false` to disable it.
-  #has_wiki: true
+  has_wiki: false
 
   # The default branch for this repository.
   default_branch: main
-
-  # Desired language or platform [.gitignore template](https://github.com/github/gitignore)
-  # to apply. Use the name of the template without the extension.
-  # For example, "Haskell".
-  #gitignore_template: node
 
   # Choose an [open source license template](https://choosealicense.com/)
   # that best suits your needs, and then use the
   # [license keyword](https://help.github.com/articles/licensing-a-repository/#searching-github-by-license-type)
   # as the `license_template` string. For example, "mit" or "mpl-2.0".
-  #license_template: mit
+  license_template: apache-2.0
 
   # Either `true` to allow squash-merging pull requests, or `false` to prevent
   # squash-merging.
-  #allow_squash_merge: true
+  allow_squash_merge: true
 
   # Either `true` to allow merging pull requests with a merge commit, or `false`
   # to prevent merging pull requests with merge commits.
-  #allow_merge_commit: true
+  allow_merge_commit: true
 
   # Either `true` to allow rebase-merging pull requests, or `false` to prevent
   # rebase-merging.
@@ -41,11 +63,22 @@ repository:
 
   # Either `true` to allow auto-merge on pull requests,
   # or `false` to disallow auto-merge.
+  # Default: `false`
   allow_auto_merge: true
 
   # Either `true` to allow automatically deleting head branches
   # when pull requests are merged, or `false` to prevent automatic deletion.
+  # Default: `false`
   delete_branch_on_merge: true
+
+# See https://developer.github.com/v3/teams/#add-or-update-team-repository for available options
+# The permission to grant the team. Can be one of:
+# * `pull` - can pull, but not push to or administer this repository.
+# * `push` - can pull and push, but not administer this repository.
+# * `admin` - can pull, push and administer this repository.
+teams:
+  - name: apm-agent-ruby
+    permission: push
 
 # The following attributes are applied to any repo within the org
 # So if a repo is not listed above is created or edited
@@ -53,28 +86,9 @@ repository:
 labels:
   # Labels: define labels for Issues and Pull Requests
   include:
-    - name: bug
+    - name: my-new-ruby-label
       color: CC0000
       description: An issue with the system.
-
-    - name: feature
-      color: '#336699'
-      description: New functionality.
-
-    - name: new-label
-      # include the old name to rename an existing label
-      oldname: Help Wanted
-      color: '#326699'
-  exclude:
-    # don't delete any labels created on GitHub that starts with "backp"
-    - name: ^backp*
-
-# See https://developer.github.com/v3/teams/#add-or-update-team-repository for available options
-teams:
-  - name: core
-    permission: admin
-  - name: apm-agents-lead
-    permission: admin
 
 branches:
   # If the name of the branch value is specified as `default`, then the app will create a branch protection rule to apply against the default branch in the repo
@@ -85,7 +99,7 @@ branches:
       # Required. Require at least one approving review on a pull request, before merging. Set to null to disable.
       required_pull_request_reviews:
         # The number of approvals required. (1-6)
-        required_approving_review_count: 3
+        required_approving_review_count: 2
         # Dismiss approved reviews automatically when a new commit is pushed.
         dismiss_stale_reviews: true
         # Blocks merge until code owners have reviewed.
