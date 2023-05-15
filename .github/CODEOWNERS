@@ -1,0 +1,7 @@
+# GitHub CODEOWNERS definition
+# See: https://help.github.com/articles/about-codeowners/
+
+/.github/suborgs/apm-agents.yml @elastic-robots/apm-agents-lead
+
+/.github/repos/apm-agent-php.yml @elastic-robots/apm-agent-php
+/.github/repos/apm-agent-ruby.yml @elastic-robots/apm-agent-ruby
