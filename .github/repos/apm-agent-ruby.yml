@@ -20,7 +20,7 @@ repository:
   - safe-settings
   - monitoring
   - apm
-	- test
+  - test
 
   # Settings for Code security and analysis
   # Dependabot Alerts
