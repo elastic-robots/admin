@@ -96,9 +96,9 @@ branches:
       # Required. Require at least one approving review on a pull request, before merging. Set to null to disable.
       required_pull_request_reviews:
         # The number of approvals required. (1-6)
-        required_approving_review_count: 2
+        required_approving_review_count: 3
         # Dismiss approved reviews automatically when a new commit is pushed.
-        dismiss_stale_reviews: true
+        dismiss_stale_reviews: false
         # Blocks merge until code owners have reviewed.
         require_code_owner_reviews: true
         # Whether the most recent reviewable push must be approved by someone other than the person who pushed it.
