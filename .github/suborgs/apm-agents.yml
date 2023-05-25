@@ -55,7 +55,7 @@ labels:
   include:
     - name: bug
       color: CC0000
-      description: 'An issue with the..'
+      description: 'An issue with..'
 
     - name: feature
       color: '#336699'
