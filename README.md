@@ -63,8 +63,8 @@ Implements controls described in [Access Controls](#Access-Controls)
 
 This file implements controls which apply to the entire organization which may be manipulated only by [Org Admins](#organization-design)[1].
 
-[!NOTE]
-Settings declared in this file apply to the entire organization but individual repositories can be declared exempt through configuration present in this file.
+> [!NOTE]
+> Settings declared in this file apply to the entire organization but individual repositories can be declared exempt through configuration present in this file.
 
 #### .github/repos
 
