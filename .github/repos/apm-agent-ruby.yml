@@ -20,6 +20,7 @@ repository:
   - safe-settings
   - monitoring
   - apm
+  - test
 
   # Settings for Code security and analysis
   # Dependabot Alerts
@@ -89,6 +90,9 @@ labels:
     - name: my-new-ruby-label
       color: CC0000
       description: An issue with the system.
+    - name: my-new-super-label
+      color: AC0000
+      description: An issue with the system MY SUPER DUPER
 
 branches:
   # If the name of the branch value is specified as `default`, then the app will create a branch protection rule to apply against the default branch in the repo
@@ -99,13 +103,13 @@ branches:
       # Required. Require at least one approving review on a pull request, before merging. Set to null to disable.
       required_pull_request_reviews:
         # The number of approvals required. (1-6)
-        required_approving_review_count: 2
+        required_approving_review_count: 6
         # Dismiss approved reviews automatically when a new commit is pushed.
         dismiss_stale_reviews: true
         # Blocks merge until code owners have reviewed.
         require_code_owner_reviews: true
         # Whether the most recent reviewable push must be approved by someone other than the person who pushed it.
-        require_last_push_approval: true
+        require_last_push_approval: false
         # Allow specific users, teams, or apps to bypass pull request requirements. Set to null to disable.
         bypass_pull_request_allowances:
           apps: []
