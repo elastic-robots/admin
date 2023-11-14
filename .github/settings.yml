@@ -1,27 +1,26 @@
 # This settings can be used to create org level settings
 #
 #
-org:
-  rulesets:
-  - name: Enforce pull requests
-    target: branch
-    enforcement: active
-    conditions:
-        ref_name:
-          include: ["~DEFAULT_BRANCH"]
-          exclude: ["refs/heads/oldmaster"]
-        repository_name: 
-          include: ["elasticsearch"]
-          exclude: ["test","test1"]
-          protected: true
-    rules:
-    - type: pull_request
-      parameters: 
-        dismiss_stale_reviews_on_push: true
-        require_code_owner_review: true
-        require_last_push_approval: true
-        required_approving_review_count: 1
-        required_review_thread_resolution: true
+rulesets:
+- name: Enforce pull requests
+  target: branch
+  enforcement: active
+  conditions:
+      ref_name:
+        include: ["~DEFAULT_BRANCH"]
+        exclude: ["refs/heads/oldmaster"]
+      repository_name: 
+        include: ["elasticsearch"]
+        exclude: ["test","test1"]
+        protected: true
+  rules:
+  - type: pull_request
+    parameters: 
+      dismiss_stale_reviews_on_push: true
+      require_code_owner_review: true
+      require_last_push_approval: true
+      required_approving_review_count: 1
+      required_review_thread_resolution: true
 #repository: 
   # This is the settings that need to be applied to all repositories in the org 
   # See https://developer.github.com/v3/repos/#edit for all available settings for a repository  
