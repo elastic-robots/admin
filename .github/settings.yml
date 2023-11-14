@@ -1,7 +1,6 @@
 # This settings can be used to create org level settings
 #
 #
-#
 org:
   rulesets:
   - name: Enforce pull requests
