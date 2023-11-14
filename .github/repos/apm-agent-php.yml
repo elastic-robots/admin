@@ -12,11 +12,11 @@ repository:
   auto_init: true
 
   # A comma-separated list of topics to set on the repository
-  topics:
-  - php
-  - safe-settings
-  - monitoring
-  - apm
+ # topics:
+ # - php
+ # - safe-settings
+ # - monitoring
+#  - apm
 
   # Settings for Code security and analysis
   # Dependabot Alerts

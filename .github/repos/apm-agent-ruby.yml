@@ -15,12 +15,12 @@ repository:
   auto_init: true
 
   # A comma-separated list of topics to set on the repository
-  topics:
-  - ruby
-  - safe-settings
-  - monitoring
-  - apm
-  - test
+#  topics:
+#  - ruby
+#  - safe-settings
+#  - monitoring
+#  - apm
+#  - test
 
   # Settings for Code security and analysis
   # Dependabot Alerts
