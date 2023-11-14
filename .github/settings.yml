@@ -12,7 +12,7 @@ org:
           include: ["~DEFAULT_BRANCH"]
           exclude: ["refs/heads/oldmaster"]
         repository_name: 
-          include: ["elasticsearch*"]
+          include: ["elasticsearch"]
           exclude: ["test","test1"]
           protected: true
     rules:
